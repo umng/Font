@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="Font.ans"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Font"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="about" Click="AppBarButton_Click_1"/>
+            </CommandBar.SecondaryCommands>
+            <AppBarButton Icon="Back" Label="Back"/>
+            <AppBarButton Icon="Edit" Label="Edit" Click="AppBarButton_Click" />
+            <AppBarButton Icon="Copy" Label="Copy"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Name="grid">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Margin="13,11,7,6.667" Style="{ThemeResource HeaderTextBlockStyle}" FontSize="58" FontWeight="Bold" Text="wanna copy it?"/>
+        <TextBlock Text="Font" Style="{ThemeResource TitleTextBlockStyle}" Typography.Capitals="SmallCaps" Margin="10,2,7,79.667"/>
+
+        <ScrollViewer Name="sv" Margin="0,106,0,0" Grid.RowSpan="2">
+            <StackPanel Name="sp" Height="Auto" Width="383">
+                <TextBlock x:Name="tb_text" Height="Auto" TextWrapping="Wrap" Text="" FontSize="22" Foreground="{ThemeResource ToggleSwitchThumbDisabledBackgroundThemeBrush}"/>
+                <ProgressRing x:Name="ring" IsActive="True"/>
+                <TextBlock x:Name="tb_ans" TextWrapping="Wrap" Text="TextBlock" Margin="0,0,-1.667,0" FontSize="24" FontFamily="Arial" IsTextSelectionEnabled="True"/>
+
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+
+    </Grid>
+</Page>
